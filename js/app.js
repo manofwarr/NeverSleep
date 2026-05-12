@@ -28,13 +28,16 @@ window.addEventListener("load", function() {
 });
 
 document.addEventListener("focus", function(e) {
-	if (e.detail === "in") {
-		document.title = "NeverSleep: Enabled";
-		document.body.style.backgroundColor = 'rgba(103, 168, 111, 1)';
-		favicon.href="img/neversleep-awake.png"
-	} else {
-		document.body.style.backgroundColor = 'rgba(232, 56, 56, 1)';
-		document.title = "NeverSleep: Disabled";
-		favicon.href="img/neversleep-sleep.png"
-	}
+    const favicon = document.querySelector("link[rel='icon']");
+    
+    if (e.detail === "in") {
+        document.title = "NeverSleep: Enabled";
+        document.body.style.backgroundColor = 'rgba(103, 168, 111, 1)';
+        favicon.href = "img/neversleep-awake.png?v=" + Date.now();
+    } else {
+        document.title = "NeverSleep: Disabled";
+        document.body.style.backgroundColor = 'rgba(232, 56, 56, 1)';
+        favicon.href = "img/neversleep-asleep.png?v=" + Date.now();
+    }
 });
+
