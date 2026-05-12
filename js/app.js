@@ -30,9 +30,11 @@ window.addEventListener("load", function() {
 document.addEventListener("focus", function(e) {
 	if (e.detail === "in") {
 		document.title = "NeverSleep: Enabled";
-		document.body.style.backgroundColor = 'rgba(67, 18, 95, 1)';
+		document.body.style.backgroundColor = 'rgba(103, 168, 111, 1)';
+		favicon.href="img/neversleep-awake.png"
 	} else {
-		document.body.style.backgroundColor = 'red';
+		document.body.style.backgroundColor = 'rgba(232, 56, 56, 1)';
 		document.title = "NeverSleep: Disabled";
+		favicon.href="img/neversleep-sleep.png"
 	}
 });
