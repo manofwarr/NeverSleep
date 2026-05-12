@@ -37,7 +37,7 @@ document.addEventListener("focus", function(e) {
     } else {
         document.title = "NeverSleep: Disabled";
         document.body.style.backgroundColor = 'rgba(232, 56, 56, 1)';
-        favicon.href = "img/neversleep-asleep.png?v=" + Date.now();
+        favicon.href = "img/neversleep-sleep.png?v=" + Date.now();
     }
 });
 
